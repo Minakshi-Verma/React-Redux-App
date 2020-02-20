@@ -9,8 +9,14 @@ const DogCardList = (props) => {
 
     return(
         <div>
-            <button onClick ={props.dogByBreed}>check it out!</button>
-            {!props.dogBreed && !props.isLoading && (<h3>Explore the Dog World</h3>)}
+             
+            {<button onClick ={props.dogByBreed}>Click here!</button>}
+
+            {/* {!props.dogBreed && <button onClick ={props.dogByBreed}>Click here!</button>} */}
+            
+          
+             {props.error && !props.dogBreed && <h3>Sorry, something went wrong!</h3>}
+            {!props.dogBreed && !props.isLoading && !props.error && (<h3>Meet the gentle beast!!</h3>)}
             
             {props.isLoading && ( 
                  
@@ -23,11 +29,15 @@ const DogCardList = (props) => {
         
               />
             )}
-            <div className ="dogList">
+            <div className ="newDogCard">
+            {!props.isLoading && props.dogBreed && (<img src = {props.dogBreed}/>)}</div>
+
+            {/* <div className ="dogList">
             {!props.isLoading && props.dogBreed && (props.dogBreed.map((item,id)=>(
                 <DogCard  key = {item.id} item ={item} />
             ))) }          
-            </div>
+            </div> */}
+
         </div>
     )
 }

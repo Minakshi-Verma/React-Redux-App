@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background: #f3e5d8;
+  min-width: 60%;
+  margin:0 auto;
 }
 
 .App-logo {
@@ -51,4 +54,33 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
 
+}
+img{
+  min-width:60%;
+  min-height:20vh;
+  border-radius: 30px;
+  border: #623f1e 2px solid;
+}
+
+h1{
+  color: #623f1e;
+  padding: 2%;
+  font-style: italic;
+  font-family: Brush Script MT;
+  font-size:3rem;
+}
+button{
+  background: #f2ffe6;
+  color: #193300;
+  font-style: oblique; 
+}
+h3{
+  font-family: Geneva;
+}
+
+.newDogCard{
+  min-width: 20%;
+  min-height: 15vh;  
+  margin:2%;
+  border-image: 0vmin;
 }
